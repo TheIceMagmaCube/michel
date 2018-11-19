@@ -17,4 +17,4 @@ bot.on('guildMemberAdd', member => {
 
 })
 
-bot.login(cfg.token);
+bot.login(token);
