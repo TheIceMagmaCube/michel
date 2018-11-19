@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const cfg = require('./index.json');
-const token = procces.env.token
+const token = procces.env.token;
 const prefix = ("//");
 
 bot.on('ready', function () {
