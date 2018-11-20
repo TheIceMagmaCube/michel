@@ -6,7 +6,7 @@ const prefix = ("//");
 
 bot.on('ready', function () {
     console.log("Je suis prêt et opérationnel.")
-    bot.user.setActivity("tester si je suis dangereux...").catch(console.error)
+    bot.user.setActivity("surveiller le Digido BOT ... au cas où...").catch(console.error)
     
 })
 
