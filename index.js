@@ -6,7 +6,7 @@ const prefix = ("//");
 
 bot.on('ready', function () {
     console.log("Je suis prêt et opérationnel.")
-    bot.user.setActivity("apprendre à savoir faire des choses ... en Json").catch(console.error)
+    bot.user.setActivity("niquer la mère de celui qui lira !").catch(console.error)
     
 })
 
