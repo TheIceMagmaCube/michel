@@ -41,6 +41,17 @@ client.on("message", async message => {
 
 	const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 	const command = args.shift().toLowerCase();
+	
+	if(command === "join") {
+	if (message.member.voiceChannel) {
+        message.member.voiceChannel.join()
+          .then(connection => { // Connection is an instance of VoiceConnection
+           message.reply('Je suis connecté dans votre channel !');
+          })
+          .catch(console.log);
+      		} else {
+        	message.reply('Les samouraïs de Discord se sont perdus en route !\n\n Essayez de changer de salon vocal');
+      }
 
 	if(command === "help") {
 		message.channel.send({embed: {
@@ -264,14 +275,5 @@ client.on("message", async message => {
 			dispatcher.resume();
 	}
 	
-	if(command === "join")
-		if (message.member.voiceChannel) {
-        	message.member.voiceChannel.join()
-          	.then(connection => { // Connection is an instance of VoiceConnection
-           	 message.reply('Je suis connecté dans votre channel !');
-          	})
-          		.catch(console.log);
-      			} else {
-        		message.reply('Les samouraïs de Discord se sont perdus en route !\n\n Essayez de changer de salon vocal');
-      }
+
 });
