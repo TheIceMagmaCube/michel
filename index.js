@@ -250,7 +250,10 @@ client.on("message", async message => {
 	if(commande === "join") {
 		bot.on('message', message => {
   
+bot.on('message', message => {
+  
     if (message.content === '//join') {
+      // Only try to join the sender's voice channel if they are in one themselves
       if (message.member.voiceChannel) {
         message.member.voiceChannel.join()
           .then(connection => { // Connection is an instance of VoiceConnection
@@ -262,5 +265,6 @@ client.on("message", async message => {
       }
     }
   });
+
 
 });
