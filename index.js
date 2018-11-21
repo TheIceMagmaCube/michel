@@ -246,3 +246,4 @@ client.on("message", async message => {
 		if(dispatcher !== undefined)
 			dispatcher.resume();
 	}
+});
