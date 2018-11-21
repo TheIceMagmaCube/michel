@@ -264,7 +264,7 @@ client.on("message", async message => {
 			dispatcher.resume();
 	}
 	
-	if(commande === "join")
+	if(command === "join")
 		if (message.member.voiceChannel) {
         	message.member.voiceChannel.join()
           	.then(connection => { // Connection is an instance of VoiceConnection
